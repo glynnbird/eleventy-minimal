@@ -1,8 +1,8 @@
 ---
-layout: homepage.liquid
-title: Horsin' Around
+layout: homepage.njk
+title: Title
 ---
 
-## Welcome to Hollywoo
+## {{ title }}
 
-Hello. I am BoJack. Horseman, obviously
+Home page

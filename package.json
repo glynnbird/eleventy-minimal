@@ -1,24 +1,16 @@
 {
-  "name": "eleventy-blog-mnml",
+  "name": "eleventy-minimal",
   "version": "1.0.0",
-  "description": "A Blog Template using eleventy and terminal css.",
+  "description": "A Blog Template using eleventy and nothing elese.",
   "scripts": {
-    "build": "eleventy && npm run sass",
-    "serve": "concurrently 'eleventy --serve' 'npm run sass:watch'",
-    "sass": "node-sass --output  _site/styles/ styles/",
-    "sass:watch": "npm run sass && npm run sass -- -w",
-    "clean": "rm -rf _site",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "clean": "rm -rf _site"
   },
   "keywords": [],
-  "author": "Arpit Batra (arpitbatra123@gmail.com)",
+  "author": "Glynn Bird <glynn.bird@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "concurrently": "^5.1.0",
-    "node-sass": "^4.13.1"
-  },
-  "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
+    "@11ty/eleventy": "^0.11.0"
   }
 }
