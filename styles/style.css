@@ -34,8 +34,7 @@ a {
   .container {
     margin: 32px 14%; } }
 
-body {
-  text-transform: lowercase; }
+body { }
 
 .category {
   margin-top: 25px;
