@@ -1,2 +1,22 @@
 <h1>eleventy-minimal</h1>
-<p>So minimal, there's very little to see.</p>
+<p>A very minimal Eleventy template based on <a href="https://github.com/arpitbatra123/eleventy-blog-mnml">this</a>, but even more minimal.</p>
+<ul>
+<li>blog posts are added to the <code>posts</code> directory and appear in a list on the home page.</li>
+<li>compatible with GitHub Pages.</li>
+<li>includes template <code>.travis.yml</code> so that Travis can be used to deploy the blog to GitHub Pages (some additional config required).</li>
+</ul>
+<p>This is what the rendered output looks like: https://glynnbird.github.io/eleventy-minimal/.</p>
+<h2>How to use</h2>
+<p>Clone this repo and rename the repo to something useful (e.g. <code>blog</code>): remember with GitHub Pages that the repo name may form part of of your url e.g. https://glynnbird.github.io/eleventy-minimal/.</p>
+<p>Add posts be creating Markdown files in the <code>posts</code> folder. Use the existing posts as guides.</p>
+<p>Alter <code>index.md</code> to alter the content of the home page.</p>
+<p>To see your site run <code>npm run serve</code> and visit http://localhost:8080/. Notice that if you alter and save markdown, CSS or JavaScript files, the rendered web page updates automatically.</p>
+<p>To just build the static files that represent your site run <code>npm run build</code></p>
+<h2>Travis integration with GitHub Pages</h2>
+<p>From your GitHub repo's setting's panel, enable GitHub Pages from the &quot;gh-pages&quot; branch and the &quot;/&quot; folder.</p>
+<p>Enable Travis integration with your GitHub repo. Edit the <code>.travis.yml</code> file paying particular attention to</p>
+<ul>
+<li>the <code>pathprefix</code> parameter which must match the name of path your GitHub Pages site is served out on e.g. <code>/eleventy-minimal/</code> or <code>/blog/</code>.</li>
+<li>the <code>GITHUB_TOKEN</code> is expecting your Travis integration to be configured with a developer token to allow access to your GitHub account (as described <a href="https://snook.ca/archives/servers/deploying-11ty-to-gh-pages">here</a>).</li>
+</ul>
+<p>When setup correctly, whenever you publish new Markdown to the master branch, Travis will render the site with Eleventy and write the latest site to the <code>gh-pages</code> branch of the GitHub Repo. As GitHub Pages is expecting to see your HTML in the <code>gh-pages</code> branch, it's all good.</p>
