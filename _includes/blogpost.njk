@@ -6,14 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="{{ title }}" />
     <title>{{ title }}</title>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ '/styles/style.css' | url }}" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/util.css" />
   </head>
   <body>
-    <div class="container post-container">
+    <div class="c">
+      <header class="mb3">
+        <h1 class="tc mb0">Eleventy Minimal Blog Template 🔥</h1>
+        <h5 class="tc mb1">Minimal blog template for GitHub Pages with Travis build script</h5>
+      </header>
       <h1>{{ title }}</h1>
-      <div class="content">{{ content | safe}}</div>
-      <div class="back-link">
+      <div>{{ content | safe}}</div>
+      <div>
         <a href="{{ '/' | url }}">← Back</a>
       </div>
     </div>
