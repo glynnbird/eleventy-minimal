@@ -6,36 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Title" />
     <title>Title</title>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/eleventy-minimal/styles/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/util.css" />
   </head>
   <body>
-    <div class="container">
-      <h2>Title</h2>
-<p>Home page</p>
+    <div class="c">
+      <header class="mb3">
+        <h1 class="tc mb0">Eleventy Minimal Blog Template 🔥</h1>
+        <h5 class="tc mb1">Minimal blog template for GitHub Pages with Travis build script</h5>
+      </header>
 
-      <h4 class="category">Posts</h4>
-      <ul class="posts">
+      <hr /> 
+
+      <p>A very minimal Eleventy template based on <a href="https://github.com/arpitbatra123/eleventy-blog-mnml">this</a>, but even more minimal.</p>
+<ul>
+<li>blog posts are added to the <code>posts</code> directory and appear in a list on the home page.</li>
+<li>compatible with GitHub Pages.</li>
+<li>includes template <code>.travis.yml</code> so that Travis can be used to deploy the blog to GitHub Pages (some additional config required).</li>
+<li>uses minimal <a href="https://github.com/ajusa/lit">lit CSS</a> template.</li>
+</ul>
+
+
+      <hr /> 
+      
+      <h4>Posts</h4>
+      <ul>
       
         <li class="post">
-          <span class="post-title">
+          <span>
             
-              <a href="/eleventy-minimal/posts/2010-01-01-free-churro/">First post</a>
+              <a href="/eleventy-minimal/posts/2020-01-01-How-to-use/">How to Use</a>
             
           </span>
-          <span class="post-date">
-            Fri Jan 01 2010 00:00:00 GMT+0000 (Coordinated Universal Time)
+          <span>
+            Fri Jan 01 2010
           </span>
         </li>
       
         <li class="post">
-          <span class="post-title">
+          <span>
             
-              <a href="/eleventy-minimal/posts/2011-02-02-hey-bojack/">Second post</a>
+              <a href="/eleventy-minimal/posts/2020-01-02-Travis-Integration-with-GitHub-Pages/">Travis integration with GitHub Pages</a>
             
           </span>
-          <span class="post-date">
-            Thu Aug 13 2020 12:04:36 GMT+0000 (Coordinated Universal Time)
+          <span>
+            Thu Jan 02 2020
           </span>
         </li>
       

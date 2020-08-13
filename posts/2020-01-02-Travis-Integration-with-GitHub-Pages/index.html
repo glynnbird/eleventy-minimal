@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Travis integration with GitHub Pages" />
+    <title>Travis integration with GitHub Pages</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/util.css" />
+  </head>
+  <body>
+    <div class="c">
+      <header class="mb3">
+        <h1 class="tc mb0">Eleventy Minimal Blog Template 🔥</h1>
+        <h5 class="tc mb1">Minimal blog template for GitHub Pages with Travis build script</h5>
+      </header>
+      <h1>Travis integration with GitHub Pages</h1>
+      <div><p>To ensure that when you commit changes to your GitHub repository, your website updates we have to jump through some hoops.</p>
+<ul>
+<li>From your GitHub repo's setting's panel, enable GitHub Pages from the &quot;gh-pages&quot; branch and the &quot;/&quot; folder.</li>
+<li>Enable Travis integration with your GitHub repo. Edit the <code>.travis.yml</code> file paying particular attention to</li>
+<li>the <code>pathprefix</code> parameter which must match the name of path your GitHub Pages site is served out on e.g. <code>/eleventy-minimal/</code> or <code>/blog/</code>.</li>
+<li>the <code>GITHUB_TOKEN</code> is expecting your Travis integration to be configured with a developer token to allow access to your GitHub account (as described <a href="https://snook.ca/archives/servers/deploying-11ty-to-gh-pages">here</a>).</li>
+</ul>
+<p>When setup correctly, whenever you publish new Markdown to the master branch, Travis will render the site with Eleventy and write the latest site to the <code>gh-pages</code> branch of the GitHub Repo. As GitHub Pages is expecting to see your HTML in the <code>gh-pages</code> branch, it's all good.</p>
+</div>
+      <div>
+        <a href="/eleventy-minimal/">← Back</a>
+      </div>
+    </div>
+  </body>
+</html>
