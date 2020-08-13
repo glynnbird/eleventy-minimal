@@ -1,6 +1,6 @@
 ---
 layout: homepage.njk
-title: Title
+title: Very Minimal Eleventy Template
 ---
 
 A very minimal Eleventy template based on [this](https://github.com/arpitbatra123/eleventy-blog-mnml), but even more minimal.
