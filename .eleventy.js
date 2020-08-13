@@ -1,4 +1,5 @@
 module.exports = function(eleventyConfig) {
-  // Copy `img/` to `_site/img`
-  eleventyConfig.addPassthroughCopy("styles");
+  // copy static assets straight through to final site
+  eleventyConfig.addPassthroughCopy('styles')
+  eleventyConfig.addPassthroughCopy('assets')
 };
