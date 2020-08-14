@@ -1,6 +1,7 @@
 ---
 layout: homepage.njk
 title: Very Minimal Eleventy Template
+description: Eleventy very minimal blog template for GitHub Pages + Travis
 ---
 
 A very minimal Eleventy template based on [this](https://github.com/arpitbatra123/eleventy-blog-mnml), but even more minimal.
