@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <meta name="Description" content="" />
-<title>Travis integration with GitHub Pages</title>
+<title>Custom Domains</title>
 <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/util.css" />
@@ -19,8 +19,18 @@
 
 <hr /> 
 
-      <h1>Travis integration with GitHub Pages</h1>
-      <div><p>It should be possible to setup a custom domain using <a href="https://docs.github.com/articles/using-a-custom-domain-with-github-pages/">GitHub's instructions</a>. The only thing to watch out for is that the <code>.travis.yml</code> file will have to have a value of <code>/</code> for <code>--pathprefix</code> because custom domain sites are served out at the root of the website, as opposed to default GitHub Pages sites.</p>
+      <h1>Custom Domains</h1>
+      <div><p>It should be possible to setup a custom domain using
+<a href="https://docs.github.com/articles/using-a-custom-domain-with-github-pages/">GitHub's instructions</a>.
+The only thing to watch out for is that the <code>.travis.yml</code> file will have to have a value
+of <code>/</code> for <code>--pathprefix</code> because custom domain sites are served out at the root of the website,
+as opposed to default GitHub Pages sites.</p>
+<p>You'll also need a CNAME file in the root of your main/master branch containing the domain name
+you are using e.g.</p>
+<pre><code>mycustomdomain.com
+</code></pre>
+<p>Also look in the <code>.eleventy.js</code> where you'll need to uncomment the line which copies this CNAME
+file to the root of the finished site.</p>
 </div>
       <div>
         <a href="/eleventy-minimal/">← Back</a>
