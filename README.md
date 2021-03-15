@@ -16,4 +16,34 @@ See what it looks like and read more [https://glynnbird.github.io/eleventy-minim
 - [GitHub Pages](https://pages.github.com/) - free website hosting for your projects.
 - [Travis CI](https://travis-ci.org/) - continuous integration - test & ship code.
 
-All of this is a fork of the excellent [Eleventy Minimal Blog]([this](https://github.com/arpitbatra123/eleventy-blog-mnml) which I forked and substantially changed to make even more minimal. 
+All of this is a fork of the excellent [Eleventy Minimal Blog](https://github.com/arpitbatra123/eleventy-blog-mnml) which I forked and substantially changed to make even more minimal. 
+
+## What do all the files mean?
+
+### `_includes`
+
+The `_includes` directoy contains snippets of code that can either be
+
+- incorporated into pages or other includes with `{% include "header.njk" %}`
+- used as a `layout` in the _front matter_ of pages e.g https://raw.githubusercontent.com/glynnbird/eleventy-minimal/master/index.md
+
+You can think of `_includes` as a combination of Jekyll's `_includes` & `_layouts` directory.
+
+I've used Nunjucks files (with the `.njk` extension) - other templating languages are supported.
+
+### `assets`
+
+This directoy contains static assets which are moved to the destination site unchanged. This behaviour is not the default: it's set up in `.elevnty.js` [here](https://github.com/glynnbird/eleventy-minimal/blob/master/.eleventy.js#L3). This folder should be used to store static assets: JavaScript, CSS, images etc.
+
+### `posts`
+
+The `posts` directory contains one file per blog post, in Markdown. The directory also contains a `posts.json` which contains data which is combined with the front matter of every blog post. See [here](https://github.com/glynnbird/eleventy-minimal/blob/master/posts/posts.json).
+
+### `.eleventy.js`
+
+The `.eleventy.js` file contains Eleventy congifuration. It sets up the copy of `assets` to the finished site. It can also be used to add other Eleventy plugins such as syntax highlighting.
+
+### `.travis.yml`
+
+This configures Travis to execute when changes occur to the master/main branch.  It runs Eleventy against the code on the default branch and writes the output site to the `gh-pages` branch, ready for GitHub Pages to serve it out.
+
