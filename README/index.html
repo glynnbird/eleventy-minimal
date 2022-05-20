@@ -12,7 +12,7 @@
 <li><a href="https://mozilla.github.io/nunjucks/">nunjucks</a> - a rich an powerful templating language.</li>
 <li><a href="https://github.com/ajusa/lit">lit CSS</a> - a tiny responsive CSS framework.</li>
 <li><a href="https://pages.github.com/">GitHub Pages</a> - free website hosting for your projects.</li>
-<li><a href="https://travis-ci.org/">Travis CI</a> - continuous integration - test &amp; ship code.</li>
+<li>GitHub Actions to run 11ty and deploy the output to GitHub Pages</li>
 </ul>
 <p>All of this is a fork of the excellent <a href="https://github.com/arpitbatra123/eleventy-blog-mnml">Eleventy Minimal Blog</a> which I forked and substantially changed to make even more minimal.</p>
 <h2>What do all the files mean?</h2>
@@ -35,5 +35,3 @@
 <p>The <code>posts</code> directory contains one file per blog post, in Markdown. The directory also contains a <code>posts.json</code> which contains data which is combined with the front matter of every blog post. See <a href="https://github.com/glynnbird/eleventy-minimal/blob/master/posts/posts.json">here</a>.</p>
 <h3><code>.eleventy.js</code></h3>
 <p>The <code>.eleventy.js</code> file contains Eleventy congifuration. It sets up the copy of <code>assets</code> to the finished site. It can also be used to add other Eleventy plugins such as syntax highlighting.</p>
-<h3><code>.travis.yml</code></h3>
-<p>This configures Travis to execute when changes occur to the master/main branch.  It runs Eleventy against the code on the default branch and writes the output site to the <code>gh-pages</code> branch, ready for GitHub Pages to serve it out.</p>
