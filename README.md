@@ -14,7 +14,7 @@ See what it looks like and read more [https://glynnbird.github.io/eleventy-minim
 - [nunjucks](https://mozilla.github.io/nunjucks/) - a rich an powerful templating language.
 - [lit CSS](https://github.com/ajusa/lit) - a tiny responsive CSS framework.
 - [GitHub Pages](https://pages.github.com/) - free website hosting for your projects.
-- [Travis CI](https://travis-ci.org/) - continuous integration - test & ship code.
+- GitHub Actions to run 11ty and deploy the output to GitHub Pages
 
 All of this is a fork of the excellent [Eleventy Minimal Blog](https://github.com/arpitbatra123/eleventy-blog-mnml) which I forked and substantially changed to make even more minimal. 
 
@@ -43,7 +43,4 @@ The `posts` directory contains one file per blog post, in Markdown. The director
 
 The `.eleventy.js` file contains Eleventy congifuration. It sets up the copy of `assets` to the finished site. It can also be used to add other Eleventy plugins such as syntax highlighting.
 
-### `.travis.yml`
-
-This configures Travis to execute when changes occur to the master/main branch.  It runs Eleventy against the code on the default branch and writes the output site to the `gh-pages` branch, ready for GitHub Pages to serve it out.
 
