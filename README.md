@@ -4,7 +4,7 @@ A very minimal Eleventy blog template. So minimal that it's hardly even there.
 
 - blog posts are added to the `posts` directory and appear in a list on the home page.
 - compatible with GitHub Pages.
-- includes template `.travis.yml` so that Travis can be used to deploy the blog to GitHub Pages (some additional config required).
+- includes GitHub action to deploy the site to GitHub pages
 
 See what it looks like and read more [https://glynnbird.github.io/eleventy-minimal/](https://glynnbird.github.io/eleventy-minimal/).
 
@@ -22,7 +22,7 @@ All of this is a fork of the excellent [Eleventy Minimal Blog](https://github.co
 
 ### `_includes`
 
-The `_includes` directoy contains snippets of code that can either be
+The `_includes` directory contains snippets of code that can either be
 
 - incorporated into pages or other includes with `{% include "header.njk" %}`
 - used as a `layout` in the _front matter_ of pages e.g https://raw.githubusercontent.com/glynnbird/eleventy-minimal/master/index.md
@@ -33,7 +33,7 @@ I've used Nunjucks files (with the `.njk` extension) - other templating language
 
 ### `assets`
 
-This directoy contains static assets which are moved to the destination site unchanged. This behaviour is not the default: it's set up in `.elevnty.js` [here](https://github.com/glynnbird/eleventy-minimal/blob/master/.eleventy.js#L3). This folder should be used to store static assets: JavaScript, CSS, images etc.
+This directory contains static assets which are moved to the destination site unchanged. This behaviour is not the default: it's set up in `.elevnty.js` [here](https://github.com/glynnbird/eleventy-minimal/blob/master/.eleventy.js#L3). This folder should be used to store static assets: JavaScript, CSS, images etc.
 
 ### `posts`
 
