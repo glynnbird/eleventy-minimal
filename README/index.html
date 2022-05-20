@@ -14,4 +14,26 @@
 <li><a href="https://pages.github.com/">GitHub Pages</a> - free website hosting for your projects.</li>
 <li><a href="https://travis-ci.org/">Travis CI</a> - continuous integration - test &amp; ship code.</li>
 </ul>
-<p>All of this is a fork of the excellent [Eleventy Minimal Blog](<a href="https://github.com/arpitbatra123/eleventy-blog-mnml">this</a> which I forked and substantially changed to make even more minimal.</p>
+<p>All of this is a fork of the excellent <a href="https://github.com/arpitbatra123/eleventy-blog-mnml">Eleventy Minimal Blog</a> which I forked and substantially changed to make even more minimal.</p>
+<h2>What do all the files mean?</h2>
+<h3><code>_includes</code></h3>
+<p>The <code>_includes</code> directoy contains snippets of code that can either be</p>
+<ul>
+<li>incorporated into pages or other includes with `<header class="mb3"><h1 class="tc mb0">Eleventy Minimal Blog Template 🔥</h1>
+<h5 class="tc mb1">Minimal blog template for GitHub Pages with Travis build script</h5>
+</li>
+</ul>
+</header>
+<hr /> 
+`
+- used as a `layout` in the _front matter_ of pages e.g https://raw.githubusercontent.com/glynnbird/eleventy-minimal/master/index.md
+<p>You can think of <code>_includes</code> as a combination of Jekyll's <code>_includes</code> &amp; <code>_layouts</code> directory.</p>
+<p>I've used Nunjucks files (with the <code>.njk</code> extension) - other templating languages are supported.</p>
+<h3><code>assets</code></h3>
+<p>This directoy contains static assets which are moved to the destination site unchanged. This behaviour is not the default: it's set up in <code>.elevnty.js</code> <a href="https://github.com/glynnbird/eleventy-minimal/blob/master/.eleventy.js#L3">here</a>. This folder should be used to store static assets: JavaScript, CSS, images etc.</p>
+<h3><code>posts</code></h3>
+<p>The <code>posts</code> directory contains one file per blog post, in Markdown. The directory also contains a <code>posts.json</code> which contains data which is combined with the front matter of every blog post. See <a href="https://github.com/glynnbird/eleventy-minimal/blob/master/posts/posts.json">here</a>.</p>
+<h3><code>.eleventy.js</code></h3>
+<p>The <code>.eleventy.js</code> file contains Eleventy congifuration. It sets up the copy of <code>assets</code> to the finished site. It can also be used to add other Eleventy plugins such as syntax highlighting.</p>
+<h3><code>.travis.yml</code></h3>
+<p>This configures Travis to execute when changes occur to the master/main branch.  It runs Eleventy against the code on the default branch and writes the output site to the <code>gh-pages</code> branch, ready for GitHub Pages to serve it out.</p>
